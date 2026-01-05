@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY WITH BACKGROUND IMAGE */
+body {
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
+        url("assets/images/bg.jpeg"); /* Path updated for normal folder */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #e5e7eb;
+    min-height: 100vh;
+}
+
+/* WRAPPER */
+.home-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 120px;
+}
+
+.home-content {
+    animation: slideIn 1.2s ease;
+}
+
+/* NAME */
+h1 {
+    font-size: 3.2rem;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+/* TAGLINE */
+p {
+    font-size: 1.3rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.menu li a {
+    position: relative;
+    font-size: 1.05rem;
+    color: #cbd5f5;
+    padding-bottom: 5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #38bdf8;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #38bdf8;
+    transition: width 0.4s ease;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+    font-size: 22px;
+    color: #cbd5f5;
+    margin-right: 18px;
+    transition: transform 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #38bdf8;
+    transform: translateY(-4px);
+}
+
+/* ANIMATION */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* MOBILE ADAPTATION */
+@media (max-width: 768px) {
+    .home-wrapper {
+        padding-left: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .menu li a {
+        font-size: 0.95rem;
+    }
+}
