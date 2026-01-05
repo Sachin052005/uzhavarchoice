@@ -6,10 +6,35 @@
     <title>Our Services | Uzhavar Choice</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        /* BASE STYLES */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: #f5f7fb; color: #222; line-height: 1.6; }
-        .nav-link:hover { color: #0b4da2 !important; transition: 0.3s; }
         
+        /* RESPONSIVE HEADER STYLES */
+        header { 
+            background:#ffffff; 
+            box-shadow:0 2px 10px rgba(0,0,0,.08); 
+            padding:14px 28px; 
+            display:flex; 
+            align-items:center; 
+            justify-content:space-between; 
+            position:sticky; 
+            top:0; 
+            z-index:1000; 
+        }
+
+        .nav-link { text-decoration:none; color:#333; font-size:15px; font-weight:500; transition: 0.3s; }
+        .nav-link:hover { color: #0b4da2 !important; }
+        .active-link { color: #0b4da2 !important; font-weight: 700; }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* SERVICE CARD STYLES */
         .service-card {
             background: #f9f9f9;
             padding: 30px;
@@ -21,10 +46,11 @@
         }
         .service-card:hover { transform: translateY(-5px); }
         .service-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
-        .service-title { font-size: 24px; margin-bottom: 15px; font-weight: 700; color: #333; }
+        .service-title { font-size: 22px; margin-bottom: 15px; font-weight: 700; color: #333; }
         .service-desc { text-align: justify; line-height: 1.6; min-height: 120px; margin: 0; font-size: 14px; color: #444; }
         
         .cta-btn {
+            display: inline-block;
             background: #0b4da2;
             color: #fff;
             padding: 14px 28px;
@@ -35,20 +61,44 @@
             transition: background 0.3s;
         }
         .cta-btn:hover { background: #083a7a; }
+
+        /* MOBILE MENU LOGIC */
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                gap: 15px !important;
+            }
+            .nav-menu.active { display: flex; }
+            h1 { font-size: 36px !important; }
+        }
     </style>
 </head>
 <body>
 
-<header style="background:#ffffff; box-shadow:0 2px 10px rgba(0,0,0,.08); padding:14px 28px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:1000;">
+<header>
     <div style="display:flex; align-items:center; gap:12px;">
         <img src="assets/images/logo.png" alt="Uzhavar Choice" style="height:70px;">
     </div>
-    <nav style="display:flex; gap:20px; font-size:15px; font-weight:500;">
-        <a href="index.html" class="nav-link" style="text-decoration:none; color:#333;">Home</a>
-        <a href="products.html" class="nav-link" style="text-decoration:none; color:#333;">Products</a>
-        <a href="services.html" class="nav-link" style="text-decoration:none; color:#0b4da2; font-weight:700;">Services</a>
-        <a href="about.html" class="nav-link" style="text-decoration:none; color:#333;">About Us</a>
-        <a href="contact.html" class="nav-link" style="text-decoration:none; color:#333;">Contact Us</a>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <nav class="nav-menu" style="display:flex; gap:20px;">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="services.html" class="nav-link active-link">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
     </nav>
 </header>
 
@@ -64,73 +114,73 @@
     <div class="service-card">
         <img src="assets/images/drip_kit.png" class="service-image" alt="Drip Irrigation">
         <h3 class="service-title">Irrigation System & Services</h3>
-        <p class="service-desc">Our advanced irrigation systems are designed to optimize water usage and improve crop productivity. We provide end-to-end solutions including drip and sprinkler systems, fertigation units, automation, installation, and after-sales maintenance with full government subsidy assistance.</p>
+        <p class="service-desc">Our advanced irrigation systems are designed to optimize water usage and improve crop productivity. We provide end-to-end solutions including drip and sprinkler systems with full government subsidy assistance.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/mulching_sheet.png" class="service-image" alt="Mulching Sheets">
         <h3 class="service-title">Mulching & Protected Cultivation</h3>
-        <p class="service-desc">High-quality mulching sheets and protected cultivation solutions help conserve soil moisture, control weeds, and enhance crop yield. We offer supply, laying services, and technical guidance for shade nets, polyhouses, and crop-specific practices.</p>
+        <p class="service-desc">High-quality mulching sheets and protected cultivation solutions help conserve soil moisture, control weeds, and enhance crop yield. We offer supply, laying services, and technical guidance.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/fertilizer_advice.png" class="service-image" alt="Fertilizer Advisory">
         <h3 class="service-title">Fertilizer Advisory</h3>
-        <p class="service-desc">Scientific fertilizer recommendations tailored to each crop and growth stage ensure balanced nutrition and higher yields. Our advisory covers macro and micronutrients, fertigation schedules, and organic bio-fertilizer solutions.</p>
+        <p class="service-desc">Scientific fertilizer recommendations tailored to each crop and growth stage ensure balanced nutrition and higher yields. Our advisory covers macro and micronutrients and fertigation schedules.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/pest_management.png" class="service-image" alt="Pest Management">
         <h3 class="service-title">Pest & Disease Management</h3>
-        <p class="service-desc">Effective pest, disease, and weed management solutions using IPM practices help protect crops sustainably. We provide crop-specific pesticide, fungicide, and herbicide recommendations along with eco-friendly alternatives.</p>
+        <p class="service-desc">Effective pest, disease, and weed management solutions using IPM practices help protect crops sustainably. We provide crop-specific pesticide and fungicide recommendations.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/seeds.png" class="service-image" alt="Seed Selection">
         <h3 class="service-title">Seed Selection & Planning</h3>
-        <p class="service-desc">Choosing the right seed is critical. We guide farmers in selecting certified and hybrid seeds, planning seasonal crops, improving yields, and adopting crop rotation techniques for long-term soil health.</p>
+        <p class="service-desc">Choosing the right seed is critical. We guide farmers in selecting certified and hybrid seeds, planning seasonal crops, improving yields, and adopting crop rotation techniques.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/soil_testing.png" class="service-image" alt="Soil Testing">
         <h3 class="service-title">Soil & Crop Diagnostics</h3>
-        <p class="service-desc">Soil and crop diagnostic services help identify nutrient deficiencies early. Our services include soil sample analysis, interpretation, fertilizer correction plans, and recommendations for managing problem soils.</p>
+        <p class="service-desc">Soil and crop diagnostic services help identify nutrient deficiencies early. Our services include soil sample analysis, interpretation, and fertilizer correction plans.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/landscape_design.png" class="service-image" alt="Landscape Design">
         <h3 class="service-title">Landscape Design</h3>
-        <p class="service-desc">Professional landscape design services for homes and commercial spaces. We specialize in garden planning, green area development, aesthetic layouts, and sustainable landscaping solutions.</p>
+        <p class="service-desc">Professional landscape design services for homes and commercial spaces. We specialize in garden planning, green area development, and sustainable landscaping solutions.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/plant_supply.png" class="service-image" alt="Plant Supply">
         <h3 class="service-title">Plant Supply & Garden Setup</h3>
-        <p class="service-desc">We supply a wide range of ornamental, flowering, indoor, and outdoor plants along with complete setup services. Our solutions include avenue plantations, shade trees, and lawn development.</p>
+        <p class="service-desc">We supply a wide range of ornamental, flowering, indoor, and outdoor plants along with complete setup services, avenue plantations, and lawn development.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/garden_irrigation.png" class="service-image" alt="Garden Irrigation">
         <h3 class="service-title">Garden Irrigation Systems</h3>
-        <p class="service-desc">Efficient garden irrigation systems including drip lines, sprinklers, and automatic timers ensure uniform watering and water conservation for all residential and commercial landscapes.</p>
+        <p class="service-desc">Efficient garden irrigation systems including drip lines, sprinklers, and automatic timers ensure uniform watering and water conservation for all landscapes.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/garden_maintenance.png" class="service-image" alt="Garden Maintenance">
         <h3 class="service-title">Garden Maintenance</h3>
-        <p class="service-desc">Regular garden maintenance services keep landscapes healthy and visually appealing with professional care, pruning, fertilization, and seasonal maintenance contracts.</p>
+        <p class="service-desc">Regular garden maintenance services keep landscapes healthy and visually appealing with professional care, pruning, and seasonal maintenance contracts.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/farmer_support.png" class="service-image" alt="Farmer Support">
         <h3 class="service-title">Farmer Advisory</h3>
-        <p class="service-desc">Expert farmer advisory services provide on-field consultation, crop diagnostics, and technical guidance with extensive support for various government schemes and subsidies.</p>
+        <p class="service-desc">Expert farmer advisory services provide on-field consultation, crop diagnostics, and technical guidance with support for various government schemes.</p>
     </div>
 
     <div class="service-card">
         <img src="assets/images/agri_input.png" class="service-image" alt="Agri Input Supply">
         <h3 class="service-title">Agri Input Supply</h3>
-        <p class="service-desc">We supply high-quality fertilizers, pesticides, seeds, and irrigation materials trusted by farmers and institutions for reliable and productive agricultural output.</p>
+        <p class="service-desc">We supply high-quality fertilizers, pesticides, seeds, and irrigation materials trusted by farmers for reliable and productive agricultural output.</p>
     </div>
 
 </section>
@@ -182,9 +232,6 @@
 
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-bottom:20px; font-size:18px;">Follow Us</h3>
-      <p style="color:#ddd; font-size:14px; margin-bottom:15px;">
-        Stay connected with Uzhavar Choice for updates, farmer initiatives, and modern agricultural solutions.
-      </p>
       <div style="display:flex; gap:15px; font-size:24px;">
         <a href="https://www.facebook.com/profile.php?id=61586084608730" target="_blank" style="color:#fff;"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/uzhavar_choice/" target="_blank" style="color:#fff;"><i class="fa-brands fa-instagram"></i></a>
@@ -200,6 +247,13 @@
     © 2026 <strong>Uzhavar Choice</strong>. All rights reserved.
   </div>
 </footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('.nav-menu');
+        nav.classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>

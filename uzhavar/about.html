@@ -7,27 +7,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background: #f5f7fb; color: #222; line-height: 1.6; }
-        .nav-link:hover { color: #0b4da2 !important; transition: 0.3s; }
+        body { background: #f5f7fb; color: #222; line-height: 1.6; overflow-x: hidden; }
+        
+        /* Navigation Styles */
+        header { background:#ffffff; box-shadow:0 2px 10px rgba(0,0,0,.08); padding:14px 28px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:1000; }
+        .nav-link { text-decoration:none; color:#333; font-size:15px; font-weight:500; transition: 0.3s; }
+        .nav-link:hover { color: #0b4da2 !important; }
 
-        /* Team Slider Logic */
-        .team-slider { overflow: hidden; max-width: 1150px; margin: 0 auto; position: relative; }
+        /* Team Slider Logic - Fixed for Mobile Loop */
+        .team-slider { overflow: hidden; width: 100%; max-width: 1150px; margin: 0 auto; position: relative; padding: 20px 0; }
         .team-track { 
             display: flex; 
             gap: 40px; 
-            width: calc(2 * 100%); 
+            width: max-content; 
             animation: scrollTeam 40s linear infinite; 
             align-items: center; 
-            padding: 20px 0;
         }
         .team-member { 
-            flex: 0 0 auto; 
+            flex: 0 0 250px; 
             text-align: center; 
             background: #fff; 
             padding: 24px; 
             border-radius: 12px; 
             box-shadow: 0 4px 12px rgba(0,0,0,.1); 
-            width: 250px;
         }
         .team-member img { 
             width: 150px; height: 150px; 
@@ -35,7 +37,7 @@
             margin-bottom: 12px; border: 4px solid #0b4da2; 
         }
         .team-member h4 { font-size: 18px; color: #0b4da2; margin-bottom: 4px; }
-        .team-member p { font-size: 14px; color: #555; margin: 0; }
+        .team-member p { font-size: 14px; color: #555; margin: 0; line-height: 1.4; }
 
         @keyframes scrollTeam {
             0% { transform: translateX(0); }
@@ -44,23 +46,26 @@
         .team-slider:hover .team-track { animation-play-state: paused; }
 
         @media(max-width:768px){
-            .team-track { gap: 20px; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            .team-track { gap: 20px; animation-duration: 25s; }
+            .team-member { flex: 0 0 200px; padding: 15px; }
             .team-member img { width: 120px; height: 120px; }
+            h2 { font-size: 32px !important; }
         }
     </style>
 </head>
 <body>
 
-<header style="background:#ffffff; box-shadow:0 2px 10px rgba(0,0,0,.08); padding:14px 28px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:1000;">
+<header>
     <div style="display:flex; align-items:center; gap:12px;">
         <img src="assets/images/logo.png" alt="Uzhavar Choice" style="height:70px;">
     </div>
-    <nav style="display:flex; gap:20px; font-size:15px; font-weight:500;">
-        <a href="index.html" class="nav-link" style="text-decoration:none; color:#333;">Home</a>
-        <a href="products.html" class="nav-link" style="text-decoration:none; color:#333;">Products</a>
-        <a href="services.html" class="nav-link" style="text-decoration:none; color:#333;">Services</a>
-        <a href="about.html" class="nav-link" style="text-decoration:none; color:#0b4da2; font-weight:700;">About Us</a>
-        <a href="contact.html" class="nav-link" style="text-decoration:none; color:#333;">Contact Us</a>
+    <nav style="display:flex; gap:20px;">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link" style="color:#0b4da2; font-weight:700;">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
     </nav>
 </header>
 
@@ -76,71 +81,62 @@
 
 <section style="max-width:1100px; margin:70px auto; padding:0 20px;">
     <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center;">
-        
         <div style="position:relative; flex:1; min-width:300px; background:#fff; padding:40px 32px 32px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.1);">
             <img src="assets/images/vision.png" alt="Vision" style="position:absolute; top:-25px; left:20px; width:55px; height:55px; background:#fff; border-radius:50%; padding:8px; box-shadow:0 4px 10px rgba(0,0,0,.15);">
             <h3 style="color:#0b4da2; font-size:26px; margin-bottom:14px; margin-top:10px;">Our Vision</h3>
-            <p style="color:#555; font-size:16px; line-height:1.8;">
-                To become a leading farmer-centric agricultural brand in India, known for innovation, trust, and sustainability — enabling farmers to practice profitable agriculture while protecting the environment for future generations.
-            </p>
+            <p style="color:#555; font-size:16px; line-height:1.8;">To become a leading farmer-centric agricultural brand in India, known for innovation, trust, and sustainability — enabling farmers to practice profitable agriculture while protecting the environment for future generations.</p>
         </div>
-
         <div style="position:relative; flex:1; min-width:300px; background:#fff; padding:40px 32px 32px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.1);">
             <img src="assets/images/mission.png" alt="Mission" style="position:absolute; top:-25px; left:20px; width:55px; height:55px; background:#fff; border-radius:50%; padding:8px; box-shadow:0 4px 10px rgba(0,0,0,.15);">
             <h3 style="color:#0b4da2; font-size:26px; margin-bottom:14px; margin-top:10px;">Our Mission</h3>
-            <p style="color:#555; font-size:16px; line-height:1.8;">
-                To empower farmers by bridging the gap between traditional practices and modern agricultural technologies. We strive to provide affordable, effective, and sustainable solutions that improve productivity and livelihoods.
-            </p>
+            <p style="color:#555; font-size:16px; line-height:1.8;">To empower farmers by bridging the gap between traditional practices and modern agricultural technologies. We strive to provide affordable, effective, and sustainable solutions that improve productivity and livelihoods.</p>
         </div>
     </div>
 </section>
 
 <section style="padding:56px 20px; background:#f5f7fb;">
     <h2 style="text-align:center; color:#0b4da2; font-size:30px; margin-bottom:16px;">Meet Our Team</h2>
-    <p style="text-align:center; color:#666; margin-bottom:36px; max-width:800px; margin-left:auto; margin-right:auto;">
-        Our dedicated team combines expertise in agriculture, technology, and business development to empower farmers.
-    </p>
-
     <div class="team-slider">
         <div class="team-track">
             <div class="team-member"><img src="assets/images/team/sugavanamrs.png"><h4>SUGAVANAM R S</h4><p>Chief Executive Officer</p></div>
             <div class="team-member"><img src="assets/images/team/uthirasamy.png"><h4>Uthirasamy</h4><p>Business Development Manager</p></div>
-            <div class="team-member"><img src="assets/images/team/prabhakaran.jpeg"><h4>Prabhakaran</h4><p>Technical Admin</p><p>Precision Farming</p></div>
-            <div class="team-member"><img src="assets/images/team/sudharsan.png"><h4>Sudharsan</h4><p>Technical Admin</p><p>Crop Production</p></div>
-            <div class="team-member"><img src="assets/images/team/sathish.png"><h4>Sathish Kumar</h4><p>Technical Admin</p><p>Crop Protection</p></div>
+            <div class="team-member"><img src="assets/images/team/prabhakaran.jpeg"><h4>Prabhakaran</h4><p>Technical Admin<br>Precision Farming</p></div>
+            <div class="team-member"><img src="assets/images/team/sudharsan.png"><h4>Sudharsan</h4><p>Technical Admin<br>Crop Production</p></div>
+            <div class="team-member"><img src="assets/images/team/sathish.png"><h4>Sathish Kumar</h4><p>Technical Admin<br>Crop Protection</p></div>
             <div class="team-member"><img src="assets/images/team/sachin.png"><h4>Sachin A R</h4><p>Associate Software Engineer</p></div>
-            
             <div class="team-member"><img src="assets/images/team/sugavanamrs.png"><h4>SUGAVANAM R S</h4><p>Chief Executive Officer</p></div>
             <div class="team-member"><img src="assets/images/team/uthirasamy.png"><h4>Uthirasamy</h4><p>Business Development Manager</p></div>
-            <div class="team-member"><img src="assets/images/team/prabhakaran.jpeg"><h4>Prabhakaran</h4><p>Technical Admin</p><p>Precision Farming</p></div>
-            <div class="team-member"><img src="assets/images/team/sudharsan.png"><h4>Sudharsan</h4><p>Technical Admin</p><p>Crop Production</p></div>
-            <div class="team-member"><img src="assets/images/team/sathish.png"><h4>Sathish Kumar</h4><p>Technical Admin</p><p>Crop Protection</p></div>
+            <div class="team-member"><img src="assets/images/team/prabhakaran.jpeg"><h4>Prabhakaran</h4><p>Technical Admin<br>Precision Farming</p></div>
+            <div class="team-member"><img src="assets/images/team/sudharsan.png"><h4>Sudharsan</h4><p>Technical Admin<br>Crop Production</p></div>
+            <div class="team-member"><img src="assets/images/team/sathish.png"><h4>Sathish Kumar</h4><p>Technical Admin<br>Crop Protection</p></div>
             <div class="team-member"><img src="assets/images/team/sachin.png"><h4>Sachin A R</h4><p>Associate Software Engineer</p></div>
         </div>
     </div>
 </section>
+
+
 
 <section style="background:#f7f7f7; padding:70px 20px;">
     <div style="max-width:1100px; margin:0 auto; text-align:center;">
         <h2 style="color:#0b4da2; font-size:34px; margin-bottom:40px;">Our Core Values</h2>
         <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px;">
             <div style="background:#fff; padding:28px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1);">
-                <img src="assets/images/integrity.jpeg" style="width:180px; height:180px; object-fit:cover; margin-bottom:12px;">
+                <img src="assets/images/integrity.jpeg" style="width:100%; height:180px; object-fit:cover; margin-bottom:12px; border-radius:8px;">
                 <h4 style="color:#0b4da2;">Integrity</h4>
                 <p style="color:#555; font-size:14px;">Honest advice and transparent pricing.</p>
             </div>
             <div style="background:#fff; padding:28px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1);">
-                <img src="assets/images/innovation1.png" style="width:180px; height:180px; object-fit:cover; margin-bottom:12px;">
+                <img src="assets/images/innovation1.png" style="width:100%; height:180px; object-fit:cover; margin-bottom:12px; border-radius:8px;">
                 <h4 style="color:#0b4da2;">Innovation</h4>
                 <p style="color:#555; font-size:14px;">Adopting modern tech for farming.</p>
             </div>
             <div style="background:#fff; padding:28px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1);">
-                <img src="assets/images/Farmer First 2.png" style="width:180px; height:180px; object-fit:cover; margin-bottom:12px;">
+                <img src="assets/images/Farmer First 2.png" style="width:100%; height:180px; object-fit:cover; margin-bottom:12px; border-radius:8px;">
                 <h4 style="color:#0b4da2;">Farmer First</h4>
                 <p style="color:#555; font-size:14px;">Decisions guided by farmer benefit.</p>
             </div>
             <div style="background:#fff; padding:28px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1);">
-                <img src="assets/images/Sustainability3.png" style="width:180px; height:180px; object-fit:cover; margin-bottom:12px;">
+                <img src="assets/images/Sustainability3.png" style="width:100%; height:180px; object-fit:cover; margin-bottom:12px; border-radius:8px;">
                 <h4 style="color:#0b4da2;">Sustainability</h4>
                 <p style="color:#555; font-size:14px;">Protecting soil and ecosystems.</p>
             </div>
@@ -150,14 +146,10 @@
 
 <footer style="background:#0b4da2; color:#fff; padding:50px 20px; font-size:14px; line-height:1.6; margin-top:40px;">
   <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
-
     <div style="flex:1; min-width:250px;">
       <h3 style="margin-bottom:20px; border-left:4px solid #fff; padding-left:10px; font-size:18px;">About Uzhavar Choice</h3>
-      <p style="color:#ddd; font-size:15px;">
-        Uzhavar Choice is a trusted agricultural solutions provider committed to supporting farmers with quality agro-inputs, modern irrigation systems, and scientific crop management services.
-      </p>
+      <p style="color:#ddd; font-size:15px;">Uzhavar Choice is a trusted agricultural solutions provider committed to supporting farmers with quality agro-inputs, modern irrigation systems, and scientific crop management services.</p>
     </div>
-
     <div style="flex:1; min-width:180px;">
       <h3 style="margin-bottom:20px; font-size:18px;">Quick Links</h3>
       <div style="display:flex; flex-direction:column; gap:12px; font-size:15px;">
@@ -168,28 +160,15 @@
         <a href="contact.html" style="color:#ddd; text-decoration:none;">Contact Us</a>
       </div>
     </div>
-
     <div style="flex:1; min-width:250px;">
       <h3 style="margin-bottom:20px; font-size:18px;">Contact Details</h3>
-      <p style="color:#ddd; font-size:15px;">
-        <i class="fa-solid fa-location-dot" style="margin-right:10px; color:#fff;"></i>
-        11/199, Kamaraj Nagar, <br>
-        Vellandivalasai, Idappadi, <br>
-        Salem, Tamil Nadu – 637105
-      </p>
-      <p style="color:#ddd; margin-top:15px; font-size:15px;">
-        <i class="fa-solid fa-phone" style="margin-right:10px; color:#fff;"></i> +91 94869 94414
-      </p>
-      <p style="color:#ddd; margin-top:15px; font-size:15px;">
-        <i class="fa-solid fa-envelope" style="margin-right:10px; color:#fff;"></i> uzhavarchoice@gmail.com
-      </p>
+      <p style="color:#ddd; font-size:15px;"><i class="fa-solid fa-location-dot" style="margin-right:10px; color:#fff;"></i>11/199, Kamaraj Nagar, <br>Vellandivalasai, Idappadi, <br>Salem, Tamil Nadu – 637105</p>
+      <p style="color:#ddd; margin-top:15px; font-size:15px;"><i class="fa-solid fa-phone" style="margin-right:10px; color:#fff;"></i> +91 94869 94414</p>
+      <p style="color:#ddd; margin-top:15px; font-size:15px;"><i class="fa-solid fa-envelope" style="margin-right:10px; color:#fff;"></i> uzhavarchoice@gmail.com</p>
     </div>
-
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-bottom:20px; font-size:18px;">Follow Us</h3>
-      <p style="color:#ddd; font-size:14px; margin-bottom:15px;">
-        Stay connected with Uzhavar Choice for updates, farmer initiatives, and modern agricultural solutions.
-      </p>
+      <p style="color:#ddd; font-size:14px; margin-bottom:15px;">Stay connected with Uzhavar Choice for updates, farmer initiatives, and modern agricultural solutions.</p>
       <div style="display:flex; gap:15px; font-size:24px;">
         <a href="https://www.facebook.com/profile.php?id=61586084608730" target="_blank" style="color:#fff;"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/uzhavar_choice/" target="_blank" style="color:#fff;"><i class="fa-brands fa-instagram"></i></a>
@@ -198,13 +177,8 @@
         <a href="https://www.youtube.com/@uzhavarchoice" target="_blank" style="color:#fff;"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
-
   </div>
-
-  <div style="text-align:center; color:#ccc; margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; font-size:13px;">
-    © 2026 <strong>Uzhavar Choice</strong>. All rights reserved.
-  </div>
+  <div style="text-align:center; color:#ccc; margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; font-size:13px;">© 2026 <strong>Uzhavar Choice</strong>. All rights reserved.</div>
 </footer>
-
 </body>
 </html>
