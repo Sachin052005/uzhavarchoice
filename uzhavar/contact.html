@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background: #f5f7fb; color: #222; line-height: 1.6; }
+        body { background: #f5f7fb; color: #222; line-height: 1.6; overflow-x: hidden; }
         
-        /* Navigation Styles */
+        /* Navigation Styles - Desktop */
         header { 
             background:#ffffff; 
             box-shadow:0 2px 10px rgba(0,0,0,.08); 
@@ -21,20 +21,12 @@
             top:0; 
             z-index:1000; 
         }
-        
+        nav { display: flex; gap: 25px; }
         .nav-link { text-decoration:none; color:#333; font-size:15px; font-weight:500; transition: 0.3s; }
-        .nav-link:hover { color: #0b4da2; }
+        .nav-link:hover { color: #0b4da2 !important; }
         .active-link { color: #0b4da2 !important; font-weight: 700; }
 
-        /* Mobile Menu Button */
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #333;
-        }
-
-        /* Form Styles */
+        /* Form Specific Styles */
         input:focus, textarea:focus {
             outline: none;
             border-color: #1e88e5 !important;
@@ -54,26 +46,27 @@
         }
         .submit-btn:hover { background: #083a7a; transform: translateY(-2px); }
 
-        /* Responsive Mobile Header Logic */
-        @media(max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            .nav-menu {
-                display: none; /* Hidden by default on mobile */
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #fff;
-                padding: 20px;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        /* MOBILE VIEW ALIGNMENT - MATCHING ABOUT/INDEX */
+        @media(max-width:768px){
+            header {
+                flex-direction: column !important;
+                padding: 15px 10px !important;
                 gap: 15px !important;
+                text-align: center;
             }
-            .nav-menu.active {
-                display: flex; /* Show menu when toggle clicked */
+            nav {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 12px !important;
+                width: 100%;
             }
+            .nav-link {
+                font-size: 13px !important;
+                padding: 5px 2px;
+            }
+            h1 { font-size: 36px !important; }
         }
     </style>
 </head>
@@ -83,12 +76,7 @@
     <div style="display:flex; align-items:center; gap:12px;">
         <img src="assets/images/logo.png" alt="Uzhavar Choice" style="height:70px;">
     </div>
-    
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>
-    </div>
-
-    <nav class="nav-menu" style="display:flex; gap:20px;">
+    <nav>
         <a href="index.html" class="nav-link">Home</a>
         <a href="products.html" class="nav-link">Products</a>
         <a href="services.html" class="nav-link">Services</a>
@@ -139,14 +127,10 @@
 
 <footer style="background:#0b4da2; color:#fff; padding:50px 20px; font-size:14px; line-height:1.6; margin-top:40px;">
   <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
-
     <div style="flex:1; min-width:250px;">
       <h3 style="margin-bottom:20px; border-left:4px solid #fff; padding-left:10px; font-size:18px;">About Uzhavar Choice</h3>
-      <p style="color:#ddd; font-size:15px;">
-        Uzhavar Choice is a trusted agricultural solutions provider committed to supporting farmers with quality agro-inputs, modern irrigation systems, and scientific crop management services.
-      </p>
+      <p style="color:#ddd; font-size:15px;">Uzhavar Choice is a trusted agricultural solutions provider committed to supporting farmers with quality agro-inputs, modern irrigation systems, and scientific crop management services.</p>
     </div>
-
     <div style="flex:1; min-width:180px;">
       <h3 style="margin-bottom:20px; font-size:18px;">Quick Links</h3>
       <div style="display:flex; flex-direction:column; gap:12px; font-size:15px;">
@@ -157,28 +141,15 @@
         <a href="contact.html" style="color:#ddd; text-decoration:none;">Contact Us</a>
       </div>
     </div>
-
     <div style="flex:1; min-width:250px;">
       <h3 style="margin-bottom:20px; font-size:18px;">Contact Details</h3>
-      <p style="color:#ddd; font-size:15px;">
-        <i class="fa-solid fa-location-dot" style="margin-right:10px; color:#fff;"></i>
-        11/199, Kamaraj Nagar, <br>
-        Vellandivalasai, Idappadi, <br>
-        Salem, Tamil Nadu – 637105
-      </p>
-      <p style="color:#ddd; margin-top:15px; font-size:15px;">
-        <i class="fa-solid fa-phone" style="margin-right:10px; color:#fff;"></i> +91 94869 94414
-      </p>
-      <p style="color:#ddd; margin-top:15px; font-size:15px;">
-        <i class="fa-solid fa-envelope" style="margin-right:10px; color:#fff;"></i> uzhavarchoice@gmail.com
-      </p>
+      <p style="color:#ddd; font-size:15px;"><i class="fa-solid fa-location-dot" style="margin-right:10px; color:#fff;"></i>11/199, Kamaraj Nagar, <br>Vellandivalasai, Idappadi, <br>Salem, Tamil Nadu – 637105</p>
+      <p style="color:#ddd; margin-top:15px; font-size:15px;"><i class="fa-solid fa-phone" style="margin-right:10px; color:#fff;"></i> +91 94869 94414</p>
+      <p style="color:#ddd; margin-top:15px; font-size:15px;"><i class="fa-solid fa-envelope" style="margin-right:10px; color:#fff;"></i> uzhavarchoice@gmail.com</p>
     </div>
-
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-bottom:20px; font-size:18px;">Follow Us</h3>
-      <p style="color:#ddd; font-size:14px; margin-bottom:15px;">
-        Stay connected for updates and modern agricultural solutions.
-      </p>
+      <p style="color:#ddd; font-size:14px; margin-bottom:15px;">Stay connected with Uzhavar Choice for updates, farmer initiatives, and modern agricultural solutions.</p>
       <div style="display:flex; gap:15px; font-size:24px;">
         <a href="https://www.facebook.com/profile.php?id=61586084608730" target="_blank" style="color:#fff;"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/uzhavar_choice/" target="_blank" style="color:#fff;"><i class="fa-brands fa-instagram"></i></a>
@@ -188,18 +159,8 @@
       </div>
     </div>
   </div>
-
-  <div style="text-align:center; color:#ccc; margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; font-size:13px;">
-    © 2026 <strong>Uzhavar Choice</strong>. All rights reserved.
-  </div>
+  <div style="text-align:center; color:#ccc; margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; font-size:13px;">© 2026 <strong>Uzhavar Choice</strong>. All rights reserved.</div>
 </footer>
-
-<script>
-    function toggleMenu() {
-        const nav = document.querySelector('.nav-menu');
-        nav.classList.toggle('active');
-    }
-</script>
 
 </body>
 </html>

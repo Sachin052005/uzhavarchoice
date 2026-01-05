@@ -9,18 +9,29 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: #f5f7fb; color: #222; line-height: 1.6; overflow-x: hidden; }
         
-        /* Navigation Styles */
-        header { background:#ffffff; box-shadow:0 2px 10px rgba(0,0,0,.08); padding:14px 28px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:1000; }
+        /* Navigation Styles - Desktop */
+        header { 
+            background:#ffffff; 
+            box-shadow:0 2px 10px rgba(0,0,0,.08); 
+            padding:14px 28px; 
+            display:flex; 
+            align-items:center; 
+            justify-content:space-between; 
+            position:sticky; 
+            top:0; 
+            z-index:1000; 
+        }
+        nav { display: flex; gap: 25px; }
         .nav-link { text-decoration:none; color:#333; font-size:15px; font-weight:500; transition: 0.3s; }
         .nav-link:hover { color: #0b4da2 !important; }
 
-        /* Team Slider Logic - Fixed for Mobile Loop */
+        /* Team Slider Logic */
         .team-slider { overflow: hidden; width: 100%; max-width: 1150px; margin: 0 auto; position: relative; padding: 20px 0; }
         .team-track { 
             display: flex; 
             gap: 40px; 
             width: max-content; 
-            animation: scrollTeam 40s linear infinite; 
+            animation: scrollTeam 35s linear infinite; 
             align-items: center; 
         }
         .team-member { 
@@ -41,15 +52,50 @@
 
         @keyframes scrollTeam {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(calc(-250px * 6 - 40px * 6)); }
         }
         .team-slider:hover .team-track { animation-play-state: paused; }
 
+        /* MOBILE VIEW ALIGNMENT - FIXED TO MATCH INDEX.HTML */
         @media(max-width:768px){
-            header { flex-direction: column; gap: 15px; text-align: center; }
-            .team-track { gap: 20px; animation-duration: 25s; }
-            .team-member { flex: 0 0 200px; padding: 15px; }
-            .team-member img { width: 120px; height: 120px; }
+            header {
+                flex-direction: column !important;
+                padding: 15px 10px !important;
+                gap: 15px !important;
+                text-align: center;
+            }
+            nav {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 12px !important;
+                width: 100%;
+            }
+            .nav-link {
+                font-size: 13px !important;
+                padding: 5px 2px;
+            }
+
+            /* Team Slider Mobile Fix */
+            .team-member { 
+                flex: 0 0 160px; 
+                padding: 15px; 
+            }
+            .team-member img { width: 100px; height: 100px; }
+            .team-member h4 { font-size: 14px; }
+            .team-member p { font-size: 12px; }
+            
+            .team-track { 
+                gap: 15px; 
+                animation-duration: 25s; 
+            }
+            
+            @keyframes scrollTeam {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-160px * 6 - 15px * 6)); }
+            }
+            
             h2 { font-size: 32px !important; }
         }
     </style>
@@ -60,7 +106,7 @@
     <div style="display:flex; align-items:center; gap:12px;">
         <img src="assets/images/logo.png" alt="Uzhavar Choice" style="height:70px;">
     </div>
-    <nav style="display:flex; gap:20px;">
+    <nav>
         <a href="index.html" class="nav-link">Home</a>
         <a href="products.html" class="nav-link">Products</a>
         <a href="services.html" class="nav-link">Services</a>
@@ -114,8 +160,6 @@
     </div>
 </section>
 
-
-
 <section style="background:#f7f7f7; padding:70px 20px;">
     <div style="max-width:1100px; margin:0 auto; text-align:center;">
         <h2 style="color:#0b4da2; font-size:34px; margin-bottom:40px;">Our Core Values</h2>
@@ -168,7 +212,6 @@
     </div>
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-bottom:20px; font-size:18px;">Follow Us</h3>
-      <p style="color:#ddd; font-size:14px; margin-bottom:15px;">Stay connected with Uzhavar Choice for updates, farmer initiatives, and modern agricultural solutions.</p>
       <div style="display:flex; gap:15px; font-size:24px;">
         <a href="https://www.facebook.com/profile.php?id=61586084608730" target="_blank" style="color:#fff;"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/uzhavar_choice/" target="_blank" style="color:#fff;"><i class="fa-brands fa-instagram"></i></a>
@@ -180,5 +223,6 @@
   </div>
   <div style="text-align:center; color:#ccc; margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; font-size:13px;">© 2026 <strong>Uzhavar Choice</strong>. All rights reserved.</div>
 </footer>
+
 </body>
 </html>
