@@ -1,129 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Uzhavar Choice</title>
-    <link rel="icon" type="image/png" href="assets/images/logotop.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background: #f5f7fb; color: #222; line-height: 1.6; overflow-x: hidden; }
-        
-        /* Navigation Styles - Desktop */
-        header { 
-            background:#ffffff; 
-            box-shadow:0 2px 10px rgba(0,0,0,.08); 
-            padding:14px 28px; 
-            display:flex; 
-            align-items:center; 
-            justify-content:space-between; 
-            position:sticky; 
-            top:0; 
-            z-index:1000; 
-        }
-        nav { display: flex; gap: 25px; }
-        .nav-link { text-decoration:none; color:#333; font-size:15px; font-weight:500; transition: 0.3s; }
-        .nav-link:hover { color: #0b4da2 !important; }
-        .active-link { color: #0b4da2 !important; font-weight: 700; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Uzhavar Choice</title>
 
-        /* Form Specific Styles */
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #1e88e5 !important;
-            box-shadow: 0 0 8px rgba(30, 136, 229, 0.2);
-        }
-        .submit-btn {
-            background:#0b4da2; 
-            color:#fff; 
-            padding:16px 32px; 
-            font-size:16px;
-            font-weight:700; 
-            border:none; 
-            border-radius:8px; 
-            cursor:pointer;
-            transition: 0.3s;
-            width: 100%;
-        }
-        .submit-btn:hover { background: #083a7a; transform: translateY(-2px); }
+<!-- Tab Logo -->
+<link rel="icon" type="image/png" href="assets/images/logotop.png">
 
-        /* MOBILE VIEW ALIGNMENT - MATCHING ABOUT/INDEX */
-        @media(max-width:768px){
-            header {
-                flex-direction: column !important;
-                padding: 15px 10px !important;
-                gap: 15px !important;
-                text-align: center;
-            }
-            nav {
-                display: flex !important;
-                flex-direction: row !important;
-                flex-wrap: wrap !important;
-                justify-content: center !important;
-                gap: 12px !important;
-                width: 100%;
-            }
-            .nav-link {
-                font-size: 13px !important;
-                padding: 5px 2px;
-            }
-            h1 { font-size: 36px !important; }
-        }
-    </style>
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+body{background:#f5f7fb;color:#222;line-height:1.6;overflow-x:hidden}
+
+/* HEADER */
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:14px 28px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
+nav{display:flex;gap:25px}
+.nav-link{text-decoration:none;color:#333;font-size:15px;font-weight:500;transition:.3s}
+.nav-link:hover{color:#0b4da2}
+.active-link{color:#0b4da2;font-weight:700}
+
+/* HERO */
+.hero{background:linear-gradient(120deg,#0b4da2,#1e88e5);color:#fff;text-align:center;padding:80px 20px}
+.hero h1{font-size:48px;margin-bottom:15px;font-weight:700}
+.hero p{font-size:18px;max-width:700px;margin:auto}
+
+/* FORM */
+.form-section{padding:60px 20px;max-width:900px;margin:auto}
+.form-box{background:#fff;padding:50px 40px;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.15);border:2px solid #0b4da2}
+.form-box h2{text-align:center;color:#0b4da2;font-size:28px;margin-bottom:34px;font-weight:700}
+label{font-weight:600;display:block;margin-bottom:8px}
+input,textarea{width:100%;padding:14px;border-radius:8px;border:1px solid #0b4da2;font-size:16px;font-weight:500}
+input:focus,textarea:focus{outline:none;border-color:#1e88e5;box-shadow:0 0 8px rgba(30,136,229,.2)}
+textarea{resize:vertical}
+.submit-btn{background:#0b4da2;color:#fff;padding:16px;font-size:16px;font-weight:700;border:none;border-radius:8px;cursor:pointer;width:100%;transition:.3s}
+.submit-btn:hover{background:#083a7a;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#0b4da2;color:#fff;padding:50px 20px;font-size:14px;line-height:1.6;margin-top:40px}
+.footer-wrap{max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between}
+footer h3{margin-bottom:20px;font-size:18px}
+footer p,footer a{color:#ddd;font-size:15px;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.social{display:flex;gap:15px;font-size:24px}
+
+/* MOBILE */
+@media(max-width:768px){
+header{flex-direction:column;gap:15px;text-align:center}
+nav{flex-wrap:wrap;justify-content:center;gap:12px}
+.hero h1{font-size:36px}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <div style="display:flex; align-items:center; gap:12px;">
-        <img src="assets/images/logo.png" alt="Uzhavar Choice" style="height:70px;">
-    </div>
-    <nav>
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="products.html" class="nav-link">Products</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="contact.html" class="nav-link active-link">Contact Us</a>
-    </nav>
+  <div>
+    <img src="assets/images/logo.png" alt="Uzhavar Choice" style="height:70px">
+  </div>
+  <nav>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="products.html" class="nav-link">Products</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="contact.html" class="nav-link active-link">Contact Us</a>
+  </nav>
 </header>
 
-<section style="background: linear-gradient(120deg, #0b4da2, #1e88e5); color: #fff; text-align: center; padding: 80px 20px;">
-    <h1 style="font-size: 48px; margin-bottom: 15px; font-weight: 700;">Contact Us</h1>
-    <p style="font-size: 18px; max-width: 700px; margin: auto;">
-        We’d love to hear from you. Reach out for inquiries, support, or feedback!
-    </p>
+<section class="hero">
+  <h1>Contact Us</h1>
+  <p>We’d love to hear from you. Reach out for inquiries, support, or feedback!</p>
 </section>
 
-<section style="padding: 60px 20px; max-width: 900px; margin: auto;">
-    <div style="background: #fff; padding: 50px 40px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid #0b4da2;">
-        <h2 style="text-align:center; color:#0b4da2; font-size:28px; margin-bottom:34px; font-weight:700;">
-            Get In Touch
-        </h2>
+<section class="form-section">
+  <div class="form-box">
+    <h2>Get In Touch</h2>
 
-        <form action="https://formspree.io/f/uzhavarchoice@gmail.com" method="POST">
-            <div style="margin-bottom: 25px;">
-                <label for="name" style="font-weight: 600; display:block; margin-bottom:8px;">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required
-                       style="width:100%; padding:14px; border-radius:8px; border:1px solid #0b4da2; font-weight:500; font-size:16px;">
-            </div>
+    <!-- FREE EMAIL FORM -->
+    <form action="https://formsubmit.co/uzhavarchoice@gmail.com" method="POST">
+      <label>Your Name</label>
+      <input type="text" name="name" placeholder="Enter your name" required>
 
-            <div style="margin-bottom: 25px;">
-                <label for="email" style="font-weight: 600; display:block; margin-bottom:8px;">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required
-                       style="width:100%; padding:14px; border-radius:8px; border:1px solid #0b4da2; font-weight:500; font-size:16px;">
-            </div>
+      <br><br>
 
-            <div style="margin-bottom: 25px;">
-                <label for="message" style="font-weight: 600; display:block; margin-bottom:8px;">Message</label>
-                <textarea id="message" name="message" rows="6" required
-                          style="width:100%; padding:14px; border-radius:8px; border:1px solid #0b4da2; font-weight:500; font-size:16px; resize: vertical;"
-                          placeholder="Please feel free to reach out with any questions regarding our agricultural products, modern farming solutions, or service inquiries."></textarea>
-            </div>
+      <label>Email Address</label>
+      <input type="email" name="email" placeholder="Enter your email" required>
 
-            <div style="text-align: center;">
-                <button type="submit" class="submit-btn">Send Message</button>
-            </div>
-        </form>
-    </div>
+      <br><br>
+
+      <label>Message</label>
+      <textarea name="message" rows="6" placeholder="Please feel free to reach out with any questions regarding our agricultural products, modern farming solutions, or service inquiries." required></textarea>
+
+      <br><br>
+
+      <input type="hidden" name="_subject" value="New Contact Message - Uzhavar Choice">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
 </section>
 
 <footer style="background:#0b4da2; color:#fff; padding:50px 20px; font-size:14px; line-height:1.6; margin-top:40px;">
