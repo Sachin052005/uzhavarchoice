@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>தொடர்புக்கு | உழவர் சாய்ஸ்</title>
+
+<link rel="icon" type="image/png" href="assets/images/logotop.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+body{background:#f5f7fb;color:#222;line-height:1.6;overflow-x:hidden}
+
+/* HEADER */
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:14px 28px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
+nav{display:flex;gap:25px}
+.nav-link{text-decoration:none;color:#333;font-size:15px;font-weight:500;transition:.3s}
+.nav-link:hover{color:#0b4da2}
+.active-link{color:#0b4da2;font-weight:700}
+
+/* HERO */
+.hero{background:linear-gradient(120deg,#0b4da2,#1e88e5);color:#fff;text-align:center;padding:80px 20px}
+.hero h1{font-size:48px;margin-bottom:15px;font-weight:700}
+.hero p{font-size:18px;max-width:700px;margin:auto}
+
+/* FORM */
+.form-section{padding:60px 20px;max-width:900px;margin:auto}
+.form-box{background:#fff;padding:50px 40px;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.15);border:2px solid #0b4da2}
+.form-box h2{text-align:center;color:#0b4da2;font-size:28px;margin-bottom:34px;font-weight:700}
+label{font-weight:600;display:block;margin-bottom:8px}
+input,textarea{width:100%;padding:14px;border-radius:8px;border:1px solid #0b4da2;font-size:16px;font-weight:500}
+input:focus,textarea:focus{outline:none;border-color:#1e88e5;box-shadow:0 0 8px rgba(30,136,229,.2)}
+textarea{resize:vertical}
+.submit-btn{background:#0b4da2;color:#fff;padding:16px;font-size:16px;font-weight:700;border:none;border-radius:8px;cursor:pointer;width:100%;transition:.3s}
+.submit-btn:hover{background:#083a7a;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#0b4da2;color:#fff;padding:50px 20px;font-size:14px;line-height:1.6;margin-top:40px}
+.footer-wrap{max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between}
+footer h3{margin-bottom:20px;font-size:18px}
+footer p,footer a{color:#ddd;font-size:15px;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.social{display:flex;gap:15px;font-size:24px}
+
+/* MOBILE */
+@media(max-width:768px){
+header{flex-direction:column;gap:15px;text-align:center}
+nav{flex-wrap:wrap;justify-content:center;gap:12px}
+.hero h1{font-size:36px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <img src="assets/images/logo.png" alt="Uzhavar Choice" style="height:70px">
+  </div>
+  <nav>
+    <a href="index-ta.html" class="nav-link">முகப்பு</a>
+    <a href="products-ta.html" class="nav-link">தயாரிப்புகள்</a>
+    <a href="services-ta.html" class="nav-link">சேவைகள்</a>
+    <a href="about-ta.html" class="nav-link">எங்களைப் பற்றி</a>
+    <a href="contact-ta.html" class="nav-link active-link">தொடர்புக்கு</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>தொடர்பு கொள்ள</h1>
+  <p>உங்களிடமிருந்து கேட்க விரும்புகிறோம். விசாரணை, உதவி அல்லது கருத்துகளுக்கு எங்களைத் தொடர்பு கொள்ளுங்கள்!</p>
+</section>
+
+<section class="form-section">
+  <div class="form-box">
+    <h2>தகவல் அனுப்ப</h2>
+
+    <form action="https://formsubmit.co/uzhavarchoice@gmail.com" method="POST">
+      <label>உங்கள் பெயர்</label>
+      <input type="text" name="name" placeholder="உங்கள் பெயரை உள்ளிடவும்" required>
+
+      <br><br>
+
+      <label>மின்னஞ்சல் முகவரி</label>
+      <input type="email" name="email" placeholder="உங்கள் மின்னஞ்சலை உள்ளிடவும்" required>
+
+      <br><br>
+
+      <label>செய்தி</label>
+      <textarea name="message" rows="6" placeholder="எங்கள் விவசாய தயாரிப்புகள், நவீன விவசாய தீர்வுகள் அல்லது சேவை விசாரணைகள் தொடர்பான எந்தவொரு கேள்விகளுக்கும் எங்களைத் தொடர்பு கொள்ளலாம்." required></textarea>
+
+      <br><br>
+
+      <input type="hidden" name="_subject" value="புதிய தொடர்பு செய்தி - உழவர் சாய்ஸ்">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <button type="submit" class="submit-btn">செய்தி அனுப்புக</button>
+    </form>
+  </div>
+</section>
+
+<footer style="background:#0b4da2; color:#fff; padding:50px 20px; font-size:14px; line-height:1.6; margin-top:40px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+    <div style="flex:1; min-width:250px;">
+      <h3 style="margin-bottom:20px; border-left:4px solid #fff; padding-left:10px; font-size:18px;">உழவர் சாய்ஸ் பற்றி</h3>
+      <p style="color:#ddd; font-size:15px;">உழவர் சாய்ஸ் என்பது தரமான இடுபொருட்கள், நவீன நீர்ப்பாசன அமைப்புகள் மற்றும் அறிவியல் ரீதியான பயிர் மேலாண்மை சேவைகள் மூலம் விவசாயிகளை ஆதரிக்க அர்ப்பணிக்கப்பட்ட ஒரு நம்பகமான விவசாய தீர்வாகும்.</p>
+    </div>
+    <div style="flex:1; min-width:180px;">
+      <h3 style="margin-bottom:20px; font-size:18px;">விரைவான இணைப்புகள்</h3>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:15px;">
+        <a href="index-ta.html" style="color:#ddd; text-decoration:none;">முகப்பு</a>
+        <a href="products-ta.html" style="color:#ddd; text-decoration:none;">தயாரிப்புகள்</a>
+        <a href="services-ta.html" style="color:#ddd; text-decoration:none;">சேவைகள்</a>
+        <a href="about-ta.html" style="color:#ddd; text-decoration:none;">எங்களைப் பற்றி</a>
+        <a href="contact-ta.html" style="color:#ddd; text-decoration:none;">தொடர்புக்கு</a>
+      </div>
+    </div>
+    <div style="flex:1; min-width:250px;">
+      <h3 style="margin-bottom:20px; font-size:18px;">தொடர்பு விவரங்கள்</h3>
+      <p style="color:#ddd; font-size:15px;"><i class="fa-solid fa-location-dot" style="margin-right:10px; color:#fff;"></i>11/199, காமராஜ் நகர், <br>வெள்ளாண்டிவலசை, எடப்பாடி, <br>சேலம், தமிழ்நாடு – 637105</p>
+      <p style="color:#ddd; margin-top:15px; font-size:15px;"><i class="fa-solid fa-phone" style="margin-right:10px; color:#fff;"></i> +91 94869 94414</p>
+      <p style="color:#ddd; margin-top:15px; font-size:15px;"><i class="fa-solid fa-envelope" style="margin-right:10px; color:#fff;"></i> uzhavarchoice@gmail.com</p>
+    </div>
+    <div style="flex:1; min-width:220px;">
+      <h3 style="margin-bottom:20px; font-size:18px;">எங்களைப் பின்தொடரவும்</h3>
+      <p style="color:#ddd; font-size:14px; margin-bottom:15px;">நவீன விவசாய தீர்வுகள் மற்றும் புதிய அறிவிப்புகளைப் பெற எங்களோடு இணைந்திருங்கள்.</p>
+      <div style="display:flex; gap:15px; font-size:24px;">
+        <a href="https://www.facebook.com/profile.php?id=61586084608730" target="_blank" style="color:#fff;"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/uzhavar_choice/" target="_blank" style="color:#fff;"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/uzhavar-choice-85200a3a5/" target="_blank" style="color:#fff;"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://x.com/UZHAVARCHOICE" target="_blank" style="color:#fff;"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/@uzhavarchoice" target="_blank" style="color:#fff;"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; color:#ccc; margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; font-size:13px;">© 2026 <strong>உழவர் சாய்ஸ்</strong>. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</div>
+</footer>
+
+</body>
+</html>

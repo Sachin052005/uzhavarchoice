@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>எங்கள் தயாரிப்புகள் | உழவர் சாய்ஸ்</title>
+    <link rel="icon" type="image/png" href="assets/images/logotop.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* BASE STYLES */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #f5f7fb; color: #222; line-height: 1.6; }
+        
+        /* HEADER & NAV STYLES - MATCHING ABOUT.HTML */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,.08);
+            padding: 14px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav { display: flex; gap: 25px; }
+        .nav-link { text-decoration: none; color: #333; font-size: 15px; font-weight: 500; transition: 0.3s; }
+        .nav-link:hover { color: #0b4da2 !important; }
+        .active-link { color: #0b4da2 !important; font-weight: 700; }
+
+        /* Mobile Toggle Icon - Hidden as requested */
+        .menu-toggle {
+            display: none !important;
+        }
+
+        /* PRODUCT CARD STYLES */
+        .product-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+        .product-title { font-size: 22px; margin-bottom: 10px; font-weight: 700; color: #333; }
+        .product-desc { text-align: justify; line-height: 1.6; min-height: 90px; margin-bottom: 15px; font-size: 14px; }
+        
+        .buy-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: #0b4da2;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .buy-btn:hover { background: #083a7a; }
+
+        /* RESPONSIVE BREAKPOINT - MATCHING ABOUT.HTML */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column !important;
+                padding: 15px 10px !important;
+                gap: 15px !important;
+                text-align: center;
+            }
+            
+            nav {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 12px !important;
+                width: 100%;
+            }
+
+            .nav-link {
+                font-size: 13px !important;
+                padding: 5px 2px;
+            }
+            
+            h1 { font-size: 32px !important; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="display:flex; align-items:center; gap:12px;">
+        <img src="assets/images/logo.png" alt="Uzhavar Choice" style="height:70px;">
+    </div>
+
+    <nav class="nav-menu">
+        <a href="index-ta.html" class="nav-link">முகப்பு</a>
+        <a href="products-ta.html" class="nav-link active-link">தயாரிப்புகள்</a>
+        <a href="services-ta.html" class="nav-link">சேவைகள்</a>
+        <a href="about-ta.html" class="nav-link">எங்களைப் பற்றி</a>
+        <a href="contact-ta.html" class="nav-link">தொடர்புக்கு</a>
+    </nav>
+</header>
+
+<section style="background: linear-gradient(120deg, #0b4da2, #1e88e5); color: #fff; text-align: center; padding: 80px 20px;">
+    <h1 style="font-size: 48px; margin-bottom: 15px; font-weight: 700;">எங்கள் தயாரிப்புகள்</h1>
+    <p style="font-size: 18px; max-width: 700px; margin: auto;">
+        விவசாயிகள் சிறந்த மற்றும் திறமையான முறையில் வளர உதவும் வகையில் வடிவமைக்கப்பட்ட எங்களின் பரந்த அளவிலான விவசாய தயாரிப்புகளைக் கண்டறியவும்.
+    </p>
+</section>
+
+<section style="padding: 60px 20px; max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+
+    <div class="product-card">
+        <img src="assets/images/drip_kit.png" class="product-image" alt="Irrigation System">
+        <h3 class="product-title">நீர்ப்பாசன அமைப்புகள்</h3>
+        <p class="product-desc">திறமையான நீர் நிர்வாகத்திற்கு தேவையான அனைத்து கூறுகளுடன் கூடிய சொட்டுநீர் மற்றும் தெளிப்பு நீர் பாசன அமைப்புகள்.</p>
+        <a href="https://wa.me/919486994414?text=வணக்கம்! நான் நீர்ப்பாசன அமைப்புகளை (Irrigation Systems) வாங்க விரும்புகிறேன்" class="buy-btn" target="_blank">இப்போதே வாங்க</a>
+    </div>
+
+    <div class="product-card">
+        <img src="assets/images/sub_main_pipes.png" class="product-image" alt="Piping Solutions">
+        <h3 class="product-title">பைப் தீர்வுகள்</h3>
+        <p class="product-desc">நீர்ப்பாசன நெட்வொர்க்குகளுக்கு ஏற்ற வலுவான மற்றும் நீடித்த பைப் தீர்வுகள், சீரான நீர் ஓட்டம் மற்றும் நீண்ட ஆயுளை உறுதி செய்கிறது.</p>
+        <a href="https://wa.me/919486994414?text=வணக்கம்! நான் பைப் தீர்வுகளை (Piping Solutions) வாங்க விரும்புகிறேன்" class="buy-btn" target="_blank">இப்போதே வாங்க</a>
+    </div>
+
+    <div class="product-card">
+        <img src="assets/images/mulching_sheet.png" class="product-image" alt="Soil Management">
+        <h3 class="product-title">மண் மேலாண்மை</h3>
+        <p class="product-desc">ஈரப்பதத்தைத் தக்கவைக்க, களைகளைக் கட்டுப்படுத்த மற்றும் மண்ணின் நிலையை மேம்படுத்த உதவும் மல்ச்சிங் ஷீட்கள் போன்ற மண் மேலாண்மை தயாரிப்புகள்.</p>
+        <a href="https://wa.me/919486994414?text=வணக்கம்! நான் மண் மேலாண்மை (Soil Management) தயாரிப்புகளை வாங்க விரும்புகிறேன்" class="buy-btn" target="_blank">இப்போதே வாங்க</a>
+    </div>
+
+    <div class="product-card">
+        <img src="assets/images/fertilizer.png" class="product-image" alt="Crop Production">
+        <h3 class="product-title">பயிர் உற்பத்தி</h3>
+        <p class="product-desc">தாவர ஊட்டச்சத்தை மேம்படுத்தும், ஆரோக்கியமான வளர்ச்சியை ஆதரிக்கும் மற்றும் ஒட்டுமொத்த மகசூல் செயல்திறனை அதிகரிக்கும் பயிர் உற்பத்தி இடுபொருட்கள்.</p>
+        <a href="https://wa.me/919486994414?text=வணக்கம்! நான் பயிர் உற்பத்தி (Crop Production) இடுபொருட்களை வாங்க விரும்புகிறேன்" class="buy-btn" target="_blank">இப்போதே வாங்க</a>
+    </div>
+
+    <div class="product-card">
+        <img src="assets/images/fungicide.png" class="product-image" alt="Crop Protection">
+        <h3 class="product-title">பயிர் பாதுகாப்பு</h3>
+        <p class="product-desc">நோய்களைக் கட்டுப்படுத்தவும், வளரும் பருவம் முழுவதும் பயிர்களைச் சேதத்திலிருந்து பாதுகாக்கவும் உதவும் பயிர் பாதுகாப்பு தயாரிப்புகள்.</p>
+        <a href="https://wa.me/919486994414?text=வணக்கம்! நான் பயிர் பாதுகாப்பு (Crop Protection) தயாரிப்புகளை வாங்க விரும்புகிறேன்" class="buy-btn" target="_blank">இப்போதே வாங்க</a>
+    </div>
+
+    <div class="product-card">
+        <img src="assets/images/seeds.png" class="product-image" alt="Seeds">
+        <h3 class="product-title">விதைகள்</h3>
+        <p class="product-desc">நல்ல முளைப்புத் திறன், சீரான பயிர் வளர்ச்சி மற்றும் நம்பகமான விவசாய செயல்திறனுக்காக தேர்ந்தெடுக்கப்பட்ட தரமான விதைகள்.</p>
+        <a href="https://wa.me/919486994414?text=வணக்கம்! நான் விதைகளை (Seeds) வாங்க விரும்புகிறேன்" class="buy-btn" target="_blank">இப்போதே வாங்க</a>
+    </div>
+
+    <div class="product-card">
+        <img src="assets/images/advisory.png" class="product-image" alt="Crop Advisory">
+        <h3 class="product-title">பயிர் ஆலோசனை</h3>
+        <p class="product-desc">பயிர் திட்டமிடல், ஊட்டச்சத்து மேலாண்மை மற்றும் நவீன விவசாய முறைகள் குறித்து வழிகாட்டுதலை வழங்கும் தொழில்முறை ஆலோசனை சேவைகள்.</p>
+        <a href="https://wa.me/919486994414?text=வணக்கம்! நான் பயிர் ஆலோசனை (Crop Advisory) சேவைகள் குறித்து அறிய விரும்புகிறேன்" class="buy-btn" target="_blank">விசாரிக்க</a>
+    </div>
+
+    <div class="product-card">
+        <img src="assets/images/garden_borders.png" class="product-image" alt="Garden Accessories">
+        <h3 class="product-title">தோட்ட உபகரணங்கள்</h3>
+        <p class="product-desc">வீடு மற்றும் வணிகத் தோட்டங்களின் அமைப்பு, கட்டமைப்பு மற்றும் தோற்றத்தை மேம்படுத்த வடிவமைக்கப்பட்ட தோட்ட உபகரணங்கள்.</p>
+        <a href="https://wa.me/919486994414?text=வணக்கம்! நான் தோட்ட உபகரணங்களை (Garden Accessories) வாங்க விரும்புகிறேன்" class="buy-btn" target="_blank">இப்போதே வாங்க</a>
+    </div>
+
+</section>
+
+<footer style="background:#0b4da2; color:#fff; padding:50px 20px; font-size:14px; line-height:1.6; margin-top:40px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+    <div style="flex:1; min-width:250px;">
+      <h3 style="margin-bottom:20px; border-left:4px solid #fff; padding-left:10px; font-size:18px;">உழவர் சாய்ஸ் பற்றி</h3>
+      <p style="color:#ddd; font-size:15px;">உழவர் சாய்ஸ் என்பது தரமான இடுபொருட்கள், நவீன நீர்ப்பாசன அமைப்புகள் மற்றும் அறிவியல் ரீதியான பயிர் மேலாண்மை சேவைகள் மூலம் விவசாயிகளுக்கு ஆதரவளிக்க அர்ப்பணிக்கப்பட்ட ஒரு நம்பகமான விவசாய தீர்வாகும்.</p>
+    </div>
+    <div style="flex:1; min-width:180px;">
+      <h3 style="margin-bottom:20px; font-size:18px;">விரைவான இணைப்புகள்</h3>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:15px;">
+        <a href="index-ta.html" style="color:#ddd; text-decoration:none;">முகப்பு</a>
+        <a href="products-ta.html" style="color:#ddd; text-decoration:none;">தயாரிப்புகள்</a>
+        <a href="services-ta.html" style="color:#ddd; text-decoration:none;">சேவைகள்</a>
+        <a href="about-ta.html" style="color:#ddd; text-decoration:none;">எங்களைப் பற்றி</a>
+        <a href="contact-ta.html" style="color:#ddd; text-decoration:none;">தொடர்புக்கு</a>
+      </div>
+    </div>
+    <div style="flex:1; min-width:250px;">
+      <h3 style="margin-bottom:20px; font-size:18px;">தொடர்பு விவரங்கள்</h3>
+      <p style="color:#ddd; font-size:15px;"><i class="fa-solid fa-location-dot" style="margin-right:10px; color:#fff;"></i>11/199, காமராஜ் நகர், <br>வெள்ளாண்டிவலசை, எடப்பாடி, <br>சேலம், தமிழ்நாடு – 637105</p>
+      <p style="color:#ddd; margin-top:15px; font-size:15px;"><i class="fa-solid fa-phone" style="margin-right:10px; color:#fff;"></i> +91 94869 94414</p>
+      <p style="color:#ddd; margin-top:15px; font-size:15px;"><i class="fa-solid fa-envelope" style="margin-right:10px; color:#fff;"></i> uzhavarchoice@gmail.com</p>
+    </div>
+    <div style="flex:1; min-width:220px;">
+      <h3 style="margin-bottom:20px; font-size:18px;">எங்களைப் பின்தொடரவும்</h3>
+      <p style="color:#ddd; font-size:14px; margin-bottom:15px;">நவீன விவசாய தீர்வுகள் மற்றும் புதிய அறிவிப்புகளைப் பெற எங்களோடு இணைந்திருங்கள்.</p>
+      <div style="display:flex; gap:15px; font-size:24px;">
+        <a href="https://www.facebook.com/profile.php?id=61586084608730" target="_blank" style="color:#fff;"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/uzhavar_choice/" target="_blank" style="color:#fff;"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/uzhavar-choice-85200a3a5/" target="_blank" style="color:#fff;"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://x.com/UZHAVARCHOICE" target="_blank" style="color:#fff;"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/@uzhavarchoice" target="_blank" style="color:#fff;"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; color:#ccc; margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; font-size:13px;">© 2026 <strong>உழவர் சாய்ஸ்</strong>. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</div>
+</footer>
+
+</body>
+</html>
