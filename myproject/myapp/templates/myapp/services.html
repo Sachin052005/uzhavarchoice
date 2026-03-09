@@ -1,0 +1,145 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+
+{% block title %}
+Our Services | Uzhavar Choice
+{% endblock %}
+
+{% block content %}
+
+<!-- Services Page Header -->
+<section style="background: linear-gradient(120deg, #0b4da2, #1e88e5); color: #fff; text-align: center; padding: 80px 20px;">
+    <h1 style="font-size: 48px; margin-bottom: 15px; font-weight: 700;">Our Services</h1>
+    <p style="font-size: 18px; max-width: 700px; margin: auto;">
+        We provide quality agricultural solutions to help farmers and businesses thrive. Explore our services below.
+    </p>
+</section>
+
+<!-- Services Section -->
+<section style="padding: 60px 20px; max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+
+    <!-- Common paragraph style -->
+    {% comment %} text-align justified + equal height {% endcomment %}
+
+    <!-- Service Card 1 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/drip_kit.png' %}" alt="Drip Irrigation" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Irrigation System & Services</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            Our advanced irrigation systems are designed to optimize water usage and improve crop productivity. We provide end-to-end solutions including drip and sprinkler systems, fertigation units, automation, installation, and after-sales maintenance with full government subsidy assistance.
+        </p>
+    </div>
+
+    <!-- Service Card 2 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/mulching_sheet.png' %}" alt="Mulching Sheets" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Mulching & Protected Cultivation</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            High-quality mulching sheets and protected cultivation solutions help conserve soil moisture, control weeds, and enhance crop yield. We offer supply, laying services, and technical guidance for shade nets, polyhouses, and crop-specific protected farming practices.
+        </p>
+    </div>
+
+    <!-- Service Card 3 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/fertilizer_advice.png' %}" alt="Fertilizer Advisory" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Fertilizer Advisory</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            Scientific fertilizer recommendations tailored to each crop and growth stage ensure balanced nutrition and higher yields. Our advisory covers macro and micronutrients, fertigation schedules, soil health improvement, and organic or bio-fertilizer solutions.
+        </p>
+    </div>
+
+    <!-- Service Card 4 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/pest_management.png' %}" alt="Pest Management" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Pest & Disease Management</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            Effective pest, disease, and weed management solutions using IPM practices help protect crops sustainably. We provide crop-specific pesticide, fungicide, and herbicide recommendations along with eco-friendly bio-pesticide alternatives.
+        </p>
+    </div>
+
+    <!-- Service Card 5 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/seeds.png' %}" alt="Seed Selection" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Seed Selection & Planning</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            Choosing the right seed is critical for successful farming. We guide farmers in selecting certified and hybrid seeds, planning seasonal crops, improving yields, and adopting crop rotation and intercropping techniques for long-term soil health.
+        </p>
+    </div>
+
+    <!-- Service Card 6 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/soil_testing.png' %}" alt="Soil Testing" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Soil & Crop Diagnostics</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            Soil and crop diagnostic services help identify nutrient deficiencies and soil problems early. Our services include soil sample analysis, interpretation, fertilizer correction plans, and recommendations for managing problem soils effectively.
+        </p>
+    </div>
+
+    <!-- Service Card 7 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/landscape_design.png' %}" alt="Landscape Design" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Landscape Design</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            Professional landscape design services for homes, commercial spaces, and institutions. We specialize in garden planning, green area development, aesthetic layouts, and sustainable landscaping solutions that enhance outdoor spaces.
+        </p>
+    </div>
+
+    <!-- Service Card 8 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/plant_supply.png' %}" alt="Plant Supply" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Plant Supply & Garden Setup</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            We supply a wide range of ornamental, flowering, indoor, and outdoor plants along with complete garden setup services. Our solutions include avenue plantations, shade trees, lawn development, and decorative garden installations.
+        </p>
+    </div>
+
+    <!-- Service Card 9 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/garden_irrigation.png' %}" alt="Garden Irrigation" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Garden Irrigation Systems</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            Efficient garden irrigation systems including drip lines, sprinklers, and automatic timers ensure uniform watering and water conservation for all landscapes.
+        </p>
+    </div>
+
+    <!-- Service Card 10 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/garden_maintenance.png' %}" alt="Garden Maintenance" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Garden Maintenance</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            Regular garden maintenance services keep landscapes healthy and visually appealing with professional care and seasonal contracts.
+        </p>
+    </div>
+
+    <!-- Service Card 11 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/farmer_support.png' %}" alt="Farmer Support" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Farmer Advisory</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            Expert farmer advisory services provide on-field consultation, crop diagnostics, and technical guidance with government scheme support.
+        </p>
+    </div>
+
+    <!-- Service Card 12 -->
+    <div style="background:#f9f9f9;padding:30px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <img src="{% static 'image/agri_input.png' %}" alt="Agri Input Supply" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+        <h3 style="font-size:24px;margin-bottom:15px;font-weight:700;">Agri Input Supply</h3>
+        <p style="text-align:justify;line-height:1.6;min-height:120px;margin:0;">
+            We supply high-quality fertilizers, pesticides, seeds, and irrigation materials trusted by farmers and institutions.
+        </p>
+    </div>
+
+</section>
+
+<!-- Call To Action -->
+<section style="background:#e3f2fd;text-align:center;padding:60px 20px;">
+    <h2 style="font-size:32px;margin-bottom:20px;font-weight:700;">Need Expert Help?</h2>
+    <p style="font-size:18px;max-width:700px;margin:auto;margin-bottom:30px;">
+        Contact us today to discuss your agricultural needs and solutions tailored just for you.
+    </p>
+    <a href="{% url 'contact' %}" style="background:#0b4da2;color:#fff;padding:14px 28px;font-size:16px;font-weight:600;border-radius:6px;text-decoration:none;">
+        Get in Touch
+    </a>
+</section>
+
+{% endblock %}

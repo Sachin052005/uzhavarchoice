@@ -1,0 +1,12 @@
+{% comment %}
+Usage:
+{% include 'myapp/buy_now_button.html' with product_name="Product Name" product_price="Price" %}
+{% endcomment %}
+
+{% with phone_number="9486994414" %}
+<a href="https://wa.me/{{ phone_number }}?text={{ 'Hello! I am interested in buying the ' }}{{ product_name|urlencode }}"
+   target="_blank"
+   style="display: inline-block; margin-top: 10px; background: #0b4da2; color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none;">
+   Buy Now
+</a>
+{% endwith %}

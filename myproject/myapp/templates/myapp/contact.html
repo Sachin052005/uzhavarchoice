@@ -1,0 +1,80 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+
+{% block title %}
+Contact Us | Uzhavar Choice
+{% endblock %}
+
+{% block content %}
+
+<!-- Contact Page Header -->
+<section style="background: linear-gradient(120deg, #0b4da2, #1e88e5); color: #fff; text-align: center; padding: 80px 20px;">
+    <h1 style="font-size: 48px; margin-bottom: 15px; font-weight: 700;">Contact Us</h1>
+    <p style="font-size: 18px; max-width: 700px; margin: auto;">
+        We’d love to hear from you. Reach out for inquiries, support, or feedback!
+    </p>
+</section>
+
+<!-- Contact Form Section -->
+<section style="padding: 60px 20px; max-width: 900px; margin: auto;">
+
+    <!-- ✅ SUCCESS MESSAGE -->
+    {% if messages %}
+      {% for message in messages %}
+        <div style="
+          background:#e8f5e9;
+          color:#2e7d32;
+          padding:14px;
+          border-radius:8px;
+          margin-bottom:20px;
+          font-weight:600;
+          text-align:center;
+          border:1px solid #2e7d32;">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <div style="
+        background: #fff;
+        padding: 50px 40px;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        border: 2px solid #0b4da2;
+    ">
+
+        <h2 style="text-align:center; color:#0b4da2; font-size:28px; margin-bottom:24px; font-weight:700;">
+            Get In Touch
+        </h2>
+
+        <form method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
+
+            <div style="margin-bottom: 20px;">
+                <label for="name" style="font-weight: 600;">Your Name</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required
+                       style="width:100%; padding:14px; border-radius:8px; border:1px solid #0b4da2; font-weight:600;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="email" style="font-weight: 600;">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required
+                       style="width:100%; padding:14px; border-radius:8px; border:1px solid #0b4da2; font-weight:600;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="message" style="font-weight: 600;">Message</label><br>
+                <textarea id="message" name="message" rows="6" placeholder="Type your message" required
+                          style="width:100%; padding:14px; border-radius:8px; border:1px solid #0b4da2; font-weight:600;"></textarea>
+            </div>
+
+            <button type="submit"
+                    style="background:#0b4da2; color:#fff; padding:16px 32px; font-size:16px;
+                           font-weight:700; border:none; border-radius:8px; cursor:pointer;">
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

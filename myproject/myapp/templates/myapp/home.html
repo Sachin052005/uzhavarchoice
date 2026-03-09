@@ -1,0 +1,283 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+
+{% block title %}
+Uzhavar Choice | Trusted Agricultural Solutions
+{% endblock %}
+
+{% block content %}
+
+<!-- ================= HERO SECTION ================= -->
+<div style="
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:32px;
+    padding:130px 28px;
+    color:#fff;
+
+    background:
+      linear-gradient(
+        rgba(79, 146, 83, 0.85),
+        rgba(33, 48, 35, 0.85)
+      ),
+      url('{% static "image/logo.png" %}');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+">
+<div style="flex:1;min-width:280px;">
+    <h1 style="font-size:40px;margin:0 0 14px;font-weight:700;">
+      Complete Destination for Farming Solutions
+    </h1>
+
+    <p style="font-size:16px;max-width:560px;opacity:.95;">
+      Uzhavar Choice offers comprehensive agricultural solutions covering irrigation systems,
+      mulching materials, crop nutrition, and crop protection inputs.
+      Our approach combines quality products with practical advisory support to help farmers
+      achieve consistent yields and long-term farm sustainability.
+    </p>
+
+    <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;">
+      <a href="/products/" style="
+         background:#fff;
+         color:#0b4da2;
+         padding:13px 22px;
+         border-radius:6px;
+         text-decoration:none;
+         font-weight:600;">
+        Explore Products
+      </a>
+
+      <a href="{% url 'our_story' %}" style="
+         border:2px solid #fff;
+         color:#fff;
+         padding:12px 22px;
+         border-radius:6px;
+         text-decoration:none;
+         font-weight:600;">
+        Our Story
+      </a>
+
+     <a href="https://wa.me/919486994414?text=Hi, I am interested to buy some products."
+      style="
+        background:#25D366;
+        color:#fff;
+        padding:13px 22px;
+        border-radius:6px;
+        text-decoration:none;
+        font-weight:600;
+        display:inline-block;">
+      Chat on WhatsApp
+    </a>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+<div style="padding:56px 28px;background:#ffffff;">
+
+  <h2 style="text-align:center;color:#0b4da2;font-size:30px;">
+    Why Choose Uzhavar Choice
+  </h2>
+
+  <p style="text-align:center;color:#666;margin-bottom:36px;">
+    Your trusted partner for innovative, sustainable, and profitable farming solutions
+  </p>
+
+  <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:24px;
+      max-width:1150px;
+      margin:0 auto;
+  ">
+
+    <div style="background:#f5f7fb;border-radius:12px;padding:22px;text-align:center;">
+      <img src="{% static 'image/Quality.png' %}" style="height:100px;margin-bottom:12px;">
+      <h3>Quality Inputs</h3>
+      <p style="font-size:14px;color:#555;">Certified products for consistent performance.</p>
+    </div>
+
+    <div style="background:#f5f7fb;border-radius:12px;padding:22px;text-align:center;">
+      <img src="{% static 'image/Expert.png' %}" style="height:100px;margin-bottom:12px;">
+      <h3>Expert Guidance</h3>
+      <p style="font-size:14px;color:#555;">Professional crop advisory support.</p>
+    </div>
+
+    <div style="background:#f5f7fb;border-radius:12px;padding:22px;text-align:center;">
+      <img src="{% static 'image/Farmer.png' %}" style="height:100px;margin-bottom:12px;">
+      <h3>Farmer-First</h3>
+      <p style="font-size:14px;color:#555;">Affordable, farmer-focused solutions.</p>
+    </div>
+
+    <div style="background:#f5f7fb;border-radius:12px;padding:22px;text-align:center;">
+      <img src="{% static 'image/support.png' %}" style="height:100px;margin-bottom:12px;">
+      <h3>Fast Support</h3>
+      <p style="font-size:14px;color:#555;">Quick phone & WhatsApp assistance.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= SERVICES SLIDER ================= -->
+<div style="padding:56px 28px;background:#f5f7fb;overflow:hidden;">
+
+  <h2 style="text-align:center;color:#0b4da2;font-size:30px;margin-bottom:36px;">
+    Popular Categories
+  </h2>
+
+  <div style="max-width:1200px;margin:0 auto;overflow:hidden;">
+
+    <!-- Slider Track -->
+    <div style="
+      display:flex;
+      gap:24px;
+      width:max-content;
+      animation:serviceScroll 90s linear infinite;
+    ">
+
+      <!-- ===== SERVICES (SET 1) ===== -->
+
+      <!-- 1 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/drip_kit.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Irrigation Systems</h3>
+        <p style="font-size:14px;color:#555;">Drip & sprinkler systems with complete installation support.</p>
+      </div>
+
+      <!-- 2 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/mulching_sheet.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Mulching Solutions</h3>
+        <p style="font-size:14px;color:#555;">Moisture retention and weed control solutions.</p>
+      </div>
+
+      <!-- 3 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/fertilizer_advice.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Fertilizer Advisory</h3>
+        <p style="font-size:14px;color:#555;">Crop-wise nutrient plans for better yields.</p>
+      </div>
+
+      <!-- 4 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/pest_management.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Pest Management</h3>
+        <p style="font-size:14px;color:#555;">Safe pest & disease control practices.</p>
+      </div>
+
+      <!-- 5 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/seeds.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Seed Planning</h3>
+        <p style="font-size:14px;color:#555;">Certified seeds and seasonal crop planning.</p>
+      </div>
+
+      <!-- 6 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/soil_testing.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Soil Diagnostics</h3>
+        <p style="font-size:14px;color:#555;">Soil testing and nutrient correction guidance.</p>
+      </div>
+
+      <!-- 7 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/landscape_design.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Landscape Design</h3>
+        <p style="font-size:14px;color:#555;">Garden and green space design solutions.</p>
+      </div>
+
+      <!-- 8 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/plant_supply.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Plant Supply</h3>
+        <p style="font-size:14px;color:#555;">Ornamental, indoor & outdoor plant supply.</p>
+      </div>
+
+      <!-- 9 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/garden_irrigation.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Garden Irrigation</h3>
+        <p style="font-size:14px;color:#555;">Automatic watering systems for gardens.</p>
+      </div>
+
+      <!-- 10 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/garden_maintenance.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Garden Maintenance</h3>
+        <p style="font-size:14px;color:#555;">Regular care for healthy landscapes.</p>
+      </div>
+
+      <!-- 11 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/farmer_support.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Farmer Advisory</h3>
+        <p style="font-size:14px;color:#555;">On-field guidance and scheme support.</p>
+      </div>
+
+      <!-- 12 -->
+      <div style="background:#f9f9f9;padding:24px;border-radius:12px;width:300px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+        <img src="{% static 'image/agri_input.png' %}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;">
+        <h3 style="font-size:20px;font-weight:700;">Agri Input Supply</h3>
+        <p style="font-size:14px;color:#555;">Fertilizers, seeds & crop protection inputs.</p>
+      </div>
+
+      <!-- ===== DUPLICATE SAME 12 CARDS AGAIN (FOR INFINITE LOOP) ===== -->
+      <!-- (Simply repeat the same 12 cards once more) -->
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= ANIMATION ================= -->
+<style>
+@keyframes serviceScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
+
+<!-- ================= PARTNERS ================= -->
+<div style="padding:56px 28px;background:#ffffff;overflow:hidden;">
+
+  <h2 style="text-align:center;color:#0b4da2;font-size:30px;">
+    Our Association Partners
+  </h2>
+
+  <p style="text-align:center;color:#666;margin-bottom:36px;">
+    Working together with trusted brands and organizations in agriculture
+  </p>
+
+  <div style="max-width:1100px;margin:0 auto;overflow:hidden;">
+    <div style="
+        display:flex;
+        gap:60px;
+        align-items:center;
+        animation:scrollPartners 25s linear infinite;
+        width:fit-content;
+    ">
+      <img src="{% static 'image/partner1.png' %}" style="height:90px; min-width:160px; object-fit:contain;">
+      <img src="{% static 'image/partner2.png' %}" style="height:90px; min-width:160px; object-fit:contain;">
+      <img src="{% static 'image/partner3.png' %}" style="height:90px; min-width:160px; object-fit:contain;">
+      <img src="{% static 'image/partner4.png' %}" style="height:90px; min-width:160px; object-fit:contain;">
+
+      <img src="{% static 'image/partner1.png' %}" style="height:90px; min-width:160px; object-fit:contain;">
+      <img src="{% static 'image/partner2.png' %}" style="height:90px; min-width:160px; object-fit:contain;">
+      <img src="{% static 'image/partner3.png' %}" style="height:90px; min-width:160px; object-fit:contain;">
+      <img src="{% static 'image/partner4.png' %}" style="height:90px; min-width:160px; object-fit:contain;">
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes scrollPartners {
+  0%   { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(calc(-50% - 30px),0,0); }
+}
+</style>
+
+{% endblock %}

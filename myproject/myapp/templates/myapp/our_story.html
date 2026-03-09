@@ -1,0 +1,336 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+
+{% block title %}
+Our Story | Uzhavar Choice
+{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section style="background:linear-gradient(120deg,#0b4da2,#1e88e5);
+               color:#fff;text-align:center;padding:90px 20px;">
+  <h2 style="font-size:48px;margin-bottom:18px;font-weight:700;">
+    Who We Are
+  </h2>
+  <p style="color:#ffffff;font-size:16px;line-height:1.9;max-width:950px;margin:0 auto;">
+    <strong>Uzhavar Choice</strong> was founded with a clear mission — to support farmers
+    with reliable agricultural inputs, modern farming technologies, and expert advisory
+    services. The organization blends scientific knowledge with real-world field experience
+    to deliver practical, farmer-friendly solutions.
+  </p>
+  
+  <p style="color:#ffffff;font-size:16px;line-height:1.9;max-width:950px;margin:22px auto 0;">
+    Our journey began by working closely with farmers across Tamil Nadu, understanding
+    their challenges related to water scarcity, soil health, pest management, and rising
+    cultivation costs. These insights shaped our approach — focused not just on selling
+    products, but on building long-term partnerships with farming communities.
+  </p>
+</section>
+
+
+
+<!-- Mission & Vision -->
+<section style="max-width:1100px;margin:70px auto;padding:0 20px;">
+  <div style="display:flex;flex-wrap:wrap;gap:40px;justify-content:center;">
+
+    <!-- Vision -->
+    <div style="
+      position:relative;
+      flex:1;
+      min-width:300px;
+      background:#fff;
+      padding:40px 32px 32px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,.1);
+    ">
+      <!-- Icon -->
+      <img src="{% static 'image/vision.png' %}"
+           alt="Vision Icon"
+           style="
+             position:absolute;
+             top:-20px;
+             left:-20px;
+             width:55px;
+             height:55px;
+             background:#ffffff;
+             border-radius:50%;
+             padding:8px;
+             box-shadow:0 4px 10px rgba(0,0,0,.15);
+           ">
+
+      <h3 style="color:#0b4da2;font-size:26px;margin-bottom:14px;">
+        Our Vision
+      </h3>
+
+      <p style="color:#555;font-size:16px;line-height:1.8;">
+        To become a leading farmer-centric agricultural brand in India, known for innovation,
+        trust, and sustainability — enabling farmers to practice profitable agriculture
+        while protecting the environment for future generations.
+      </p>
+    </div>
+
+    <!-- Mission -->
+    <div style="
+      position:relative;
+      flex:1;
+      min-width:300px;
+      background:#fff;
+      padding:40px 32px 32px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,.1);
+    ">
+      <!-- Icon -->
+      <img src="{% static 'image/mission.png' %}"
+           alt="Mission Icon"
+           style="
+             position:absolute;
+             top:-20px;
+             left:-20px;
+             width:55px;
+             height:55px;
+             background:#ffffff;
+             border-radius:50%;
+             padding:8px;
+             box-shadow:0 4px 10px rgba(0,0,0,.15);
+           ">
+
+      <h3 style="color:#0b4da2;font-size:26px;margin-bottom:14px;">
+        Our Mission
+      </h3>
+
+      <p style="color:#555;font-size:16px;line-height:1.8;">
+        To empower farmers by bridging the gap between traditional practices and modern
+        agricultural technologies. We strive to provide affordable, effective, and
+        sustainable solutions that improve crop productivity, conserve natural resources,
+        and enhance farmer livelihoods.
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- Our Team -->
+<section style="padding:56px 20px;background:#f5f7fb;">
+  <h2 style="text-align:center;color:#0b4da2;font-size:30px;margin-bottom:16px;">
+    Meet Our Team
+  </h2>
+  <p style="text-align:center;color:#666;margin-bottom:36px;max-width:800px;margin-left:auto;margin-right:auto;">
+    Our dedicated team combines expertise in agriculture, technology, and business development to empower farmers.
+  </p>
+
+  <div class="team-slider">
+    <div class="team-track">
+
+      <!-- ORIGINAL TEAM MEMBERS -->
+      <div class="team-member">
+        <img src="{% static 'image/team/sugavanamrs.png' %}">
+        <h4>SUGAVANAM R S</h4>
+        <p>Chief Executive Officer</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/uthirasamy.png' %}">
+        <h4>Uthirasamy</h4>
+        <p>Business Development Manager</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/prabhakaran.jpeg' %}">
+        <h4>Prabhakaran</h4>
+        <p>Technical Admin </p>
+        <p>Precision Farming</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/sudharsan.png' %}">
+        <h4>Sudharsan</h4>
+        <p>Technical Admin  </p>
+        <p>Crop Production</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/sathish.png' %}">
+        <h4>Sathish Kumar</h4>
+        <p>Technical Admin </p>
+        <p>Crop Protection</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/sachin.png' %}">
+        <h4>Sachin A R</h4>
+        <p>Senior Technology Manager</p>
+        <p>Technology Strategy & Web Solutions</p>
+      </div>
+
+      <!-- DUPLICATE TEAM MEMBERS FOR CONTINUOUS SCROLL -->
+      <div class="team-member">
+        <img src="{% static 'image/team/sugavanamrs.png' %}">
+        <h4>SUGAVANAM R S</h4>
+        <p>Chief Executive Officer</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/uthirasamy.png' %}">
+        <h4>Uthirasamy</h4>
+        <p>Business Development Manager</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/prabhakaran.jpeg' %}">
+        <h4>Prabhakaran</h4>
+        <p>Technical Admin</p>
+        <p>Precision Farming</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/sudharsan.png' %}">
+        <h4>Sudharsan</h4>
+        <p>Technical Admin </p>
+        <p>Crop Production</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/sathish.png' %}">
+        <h4>Sathish Kumar</h4>
+        <p>Technical Admin</p>
+        <p>Crop Protection</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'image/team/sachin.png' %}">
+        <h4>Sachin A R</h4>
+        <p>Senior Technology Manager</p>
+        <p>Technology Strategy & Web Solutions</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+/* Slider Container */
+.team-slider {
+  overflow: hidden;
+  max-width: 1150px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Track for all team members */
+.team-track {
+  display: flex;
+  gap: 40px;
+  width: calc(2 * 100%); /* Because we duplicated the content */
+  animation: scrollTeam 40s linear infinite;
+  align-items: center;
+}
+
+/* Individual member card */
+.team-member {
+  flex: 0 0 auto;
+  text-align: center;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 4px solid #0b4da2;
+}
+
+.team-member h4 {
+  font-size: 18px;
+  color: #0b4da2;
+  margin-bottom: 4px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* Continuous infinite scroll */
+@keyframes scrollTeam {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* scroll half of the track, seamless */
+}
+
+/* Pause on hover */
+.team-slider:hover .team-track {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .team-track {
+    gap: 20px;
+  }
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+}
+</style>
+
+<!-- Core Values -->
+<section style="background:#f7f7f7;padding:70px 20px;">
+  <div style="max-width:1100px;margin:0 auto;text-align:center;">
+    
+    <h2 style="color:#0b4da2;font-size:34px;margin-bottom:40px;">
+      Our Core Values
+    </h2>
+
+    <div style="display:grid;
+                grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+                gap:24px;">
+
+      <!-- Integrity -->
+      <div style="background:#fff;padding:28px;border-radius:12px;
+                  box-shadow:0 4px 12px rgba(0,0,0,.1);text-align:center;">
+        <img src="{% static 'image/integrity.jpeg' %}" 
+             alt="Integrity"
+             style="width:200px;height:200px;margin-bottom:12px;">
+        <h4 style="color:#0b4da2;margin-bottom:8px;">Integrity</h4>
+        <p style="color:#555;font-size:14px;">
+          Honest advice, transparent pricing, and ethical business practices.
+        </p>
+      </div>
+
+      <!-- Innovation -->
+      <div style="background:#fff;padding:28px;border-radius:12px;
+                  box-shadow:0 4px 12px rgba(0,0,0,.1);text-align:center;">
+        <img src="{% static 'image/innovation1.png' %}" 
+             alt="Innovation"
+             style="width:200px;height:200px;margin-bottom:12px;">
+        <h4 style="color:#0b4da2;margin-bottom:8px;">Innovation</h4>
+        <p style="color:#555;font-size:14px;">
+          Adoption of modern technologies for efficient and sustainable farming.
+        </p>
+      </div>
+
+      <!-- Farmer First -->
+      <div style="background:#fff;padding:28px;border-radius:12px;
+                  box-shadow:0 4px 12px rgba(0,0,0,.1);text-align:center;">
+        <img src="{% static 'image/Farmer First 2.png' %}" 
+             alt="Farmer First"
+             style="width:200px;height:200px;margin-bottom:12px;">
+        <h4 style="color:#0b4da2;margin-bottom:8px;">Farmer First</h4>
+        <p style="color:#555;font-size:14px;">
+          Every decision is guided by farmer benefit and long-term success.
+        </p>
+      </div>
+
+      <!-- Sustainability -->
+      <div style="background:#fff;padding:28px;border-radius:12px;
+                  box-shadow:0 4px 12px rgba(0,0,0,.1);text-align:center;">
+        <img src="{% static 'image/Sustainability3.png' %}" 
+             alt="Sustainability"
+             style="width:200px;height:200px;margin-bottom:12px;">
+        <h4 style="color:#0b4da2;margin-bottom:8px;">Sustainability</h4>
+        <p style="color:#555;font-size:14px;">
+          Responsible use of resources to protect soil, water, and ecosystems.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
